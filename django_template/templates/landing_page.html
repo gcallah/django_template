@@ -1,0 +1,41 @@
+{% block content %}
+    <div class="container-fluid">
+     <div class="row">
+
+
+        <div class="col-sm-5">
+
+          <figure style="margin-top:30%;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/GNOME_Books_2018.svg" style="width:50%;">
+              <figcaption>
+                  <h3>Django Template</h3>
+              </figcaption>
+          </figure>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          
+        </div>
+
+
+         <div class="col-sm-7" style="margin-bottom: 50px;">
+              <h1 class="toc_head">
+              {{message}}
+              </h1>
+              
+         <ol>
+              {% for module in modules %}
+                      <li>
+                          {% autoescape off %}{{ module }}{% endautoescape %}
+                     </li>
+              {% endfor %}
+        </ol>
+       </div>
+      </div>
+
+    </div>
+
+{% endblock content %}
